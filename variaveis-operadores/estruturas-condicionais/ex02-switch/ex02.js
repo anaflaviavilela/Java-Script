@@ -1,8 +1,8 @@
 document.querySelector('#btn-calcular').addEventListener("click", function(){
 
     let nome = document.querySelector('#txtNome').value;
-    let valorH = document.querySelector('#txtVHora').value;
-    let tHoras = document.querySelector('#txtTHoras').value;
+    let valorH = parseFloat(document.querySelector('#txtVHora').value);
+    let tHoras = parseFloat(document.querySelector('#txtTHoras').value);
     let menu = document.querySelector('#txtMenu').value;
     var vTransporte = 0;
     var iRenda = 0;
@@ -14,7 +14,7 @@ document.querySelector('#btn-calcular').addEventListener("click", function(){
         iRenda = sBruto * 0.11;
     }
      else{
-         alert ('Não possui IR!')
+         alert ('Não possui IR!');
     }
 
     switch (menu) {
